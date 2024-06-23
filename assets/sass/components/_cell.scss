@@ -1,0 +1,8 @@
+.cell {
+    border:solid 1px rgb(39, 39, 39);
+    @include box(20px);
+}
+
+.alive {
+    background-color: var(--color3);
+}

@@ -1,0 +1,23 @@
+@use "../extends/_extends_dir";
+
+header {
+    width: 100%;
+    @include flex(column,center,center);
+
+    h1 {
+        margin:0;
+    }
+
+    nav {
+        width: 30%;
+        @include flex(row,space-between,center);
+
+        div {
+            @extend .pointer;
+        }
+        div:hover {
+            color:var(--color3);
+            transform: scale(110%);
+        }
+    }
+}
