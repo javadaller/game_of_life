@@ -1,4 +1,5 @@
-import { nav } from "./components/nav";
-import { customGrid } from "./components/customGrid";
-nav();
-customGrid();
+import { nav } from "./components/nav.js"
+import { customGrid } from "./components/customGrid/customGrid.js"
+
+nav()
+customGrid()

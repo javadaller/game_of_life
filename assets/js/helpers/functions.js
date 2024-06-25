@@ -18,31 +18,21 @@ export function sleep(ms) {
 * @return {Element} - the new element
 */
 export function createDiv(type, parent, content, className, setValue, setSrc) {
-    const newDiv = document.createElement(type);
+    const newDiv = document.createElement(type)
     if (content !== null) {
-        newDiv.innerHTML = content;
+        newDiv.innerHTML = content
     }
     if (className !== null) {
-        newDiv.classList.add(className);
+        newDiv.classList.add(className)
     }
     if (typeof setValue !== null) {
-        if (newDiv instanceof HTMLInputElement || newDiv instanceof HTMLTextAreaElement || newDiv instanceof HTMLSelectElement) {
-            newDiv.value = setValue;
-        }
-        else {
-            newDiv.textContent = setValue;
-        }
+        newDiv.textContent = setValue
     }
     if (setSrc !== null) {
-        if (newDiv instanceof HTMLImageElement) {
-            newDiv.src = setSrc.toString();
-        }
-        else {
-            newDiv.appendChild(document.createTextNode(setSrc.toString()));
-        }
+        newDiv.src = setSrc
     }
-    parent.appendChild(newDiv);
-    return newDiv;
+    parent.appendChild(newDiv)
+    return newDiv
 }
 //------------------------------------------------------------------------------------------
 /** ESCAPE HTML
